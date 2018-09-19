@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!-- EMPLOYEE name capital  recomended -->
+
+<class name="com.nt.entity.Event" table="EVENT">
+
+<!-- Singular ID field configuration -->
+
+
+
+<id name="Id" type="int">
+
+<column name="ID" length="5"/>
+
+</id>
+
+
+<property name="name" type="string">
+
+<column name="NAME" length="20"></column>
+
+</property>
+
+
+<property name="doe" type="date">
+
+<column name="DOE" ></column>
+
+</property>
+
+
+
+<property name="pax" type="int">
+
+<column name="PAX" length="8"></column>
+
+</property>
+
+
+<property name="location" type="string">
+
+<column name="LOCATION" length="20"></column>
+
+</property>
+
+
+</class>
+
+
+</hibernate-mapping>

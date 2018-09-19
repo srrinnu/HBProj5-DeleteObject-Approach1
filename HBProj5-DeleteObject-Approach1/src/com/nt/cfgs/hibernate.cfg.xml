@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+<property name="hibernate.connection.driver-class">oracle.jdbc.driver.OracleDriver</property>
+
+ <!--  SQL> select * from global_name;-->
+ <!--GLOBAL_NAME-->
+ <!--ORCL-->
+
+<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:ORCL1</property>
+<property name="hibernate.connection.username">scott</property>
+<property name="hibernate.connection.password">tiger</property>
+
+ <!-- Hibernate properties -->
+ 
+    <property name="show_sql">true</property>
+    
+    <property name="format_sql">true</property>
+    
+    
+    <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+<!-- Mapping File -->
+
+<mapping resource="com/nt/entity/Event.hbm.xml"/>
+
+</session-factory>
+
+
+</hibernate-configuration>
